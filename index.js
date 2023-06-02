@@ -23,8 +23,6 @@ for (let seed of wallets) {
     };
 
     const estimatedGas = await wallet.estimateGas(tx);
-
-    console.log(estimatedGas);
     await wallet.sendTransaction({
         ...tx,
         value: 0,
